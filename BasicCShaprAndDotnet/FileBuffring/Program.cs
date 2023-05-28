@@ -12,7 +12,16 @@ namespace FileBuffring
             var fileloaction = new FileAndLoaction();
             //fileloaction.FileCreateIsNotExistes();
             //fileloaction.ReadFileIFExist();
-            fileloaction.AppendAllLinesByFile();
+            //fileloaction.AppendAllLinesByFile();
+            //fileloaction.FileAppendAllText();
+            //fileloaction.FileEncrypt();
+
+            var attributes = new FileAtributesPermission();
+            //attributes.FileAttributesPermissions();
+
+
+            var fileInfo = new FileInfos();
+            fileInfo.FilesGetInformationAndCreate();
 
 
         }

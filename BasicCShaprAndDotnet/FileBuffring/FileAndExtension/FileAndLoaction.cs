@@ -87,5 +87,76 @@ namespace FileBuffring.FileAndExtension
                 }
             }
         }
+
+        // Append all  line 
+
+        public void FileAppendAllText()
+        {
+            string path = @"F:\Jallal\Files\MyTest2.txt";
+            // This text is added only once to the file.
+            if (!File.Exists(path))
+            {
+                // Create a file to write to.
+                string createText = "Hello and Welcome" + Environment.NewLine;
+                File.WriteAllText(path, createText);
+            }
+
+            // This text is always added, making the file longer over time
+            // if it is not deleted.
+            string appendText = "This is extra text" + Environment.NewLine;
+            File.AppendAllText(path, appendText);
+
+            // Open the file to read from.
+            string readText = File.ReadAllText(path);
+            Console.WriteLine(readText);
+        }
+
+
+
+
+        public void FileEncrypt()
+        {
+            try
+            {
+                string FileName = "test.txt";
+
+                Console.WriteLine("Encrypt " + FileName);
+
+                // Encrypt the file.
+                AddEncryption(FileName);
+
+                Console.WriteLine("Decrypt " + FileName);
+
+                // Decrypt the file.
+                RemoveEncryption(FileName);
+
+                Console.WriteLine("Done");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+            Console.ReadLine();
+        }
+
+
+        // Encrypt a file.
+        public static void AddEncryption(string FileName)
+        {
+
+            File.Encrypt(FileName);
+        }
+
+        // Decrypt a file.
+        public static void RemoveEncryption(string FileName)
+        {
+            File.Decrypt(FileName);
+        }
+
+
+
+
     }
+
 }
