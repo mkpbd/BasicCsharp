@@ -5,10 +5,12 @@
         static void Main(string[] args)
         {
             var asynceTask = new UnderstandAsyncTaskReturnType();
-           //var restult = asynceTask.PerformanceValueNoValueIsReturn();
-           var restult = asynceTask.GetNumberAsync();
+            //var restult = asynceTask.PerformanceValueNoValueIsReturn();
+            //Console.WriteLine( restult.Result);
+            //var restult = asynceTask.GetNumberAsync();
+            var restult = asynceTask.GetStringAsync();
 
-            Console.WriteLine(restult); ;
+            Console.WriteLine(restult.Result); ;
         }
     }
 }
