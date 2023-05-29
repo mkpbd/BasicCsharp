@@ -40,4 +40,44 @@ namespace Records.RecordExample
 
     public record Book(string Title, string Author, int Pages);
 
+
+    public record Person1(string FirstName, string LastName);
+
+
+
+    public record Person2
+    {
+        public required string FirstName { get; init; }
+        public required string LastName { get; init; }
+    };
+
+
+
+    // You can also create record types with mutable properties and fields:
+    public record Person3
+    {
+        public required string FirstName { get; set; }
+        public required string LastName { get; set; }
+    };
+
+    // While records can be mutable, they are primarily intended for supporting immutable data models. The record type offers the following features:
+
+
+    public record Person5(string FirstName, string LastName, string[] PhoneNumbers);
+
+    /**
+     * 
+     * var phoneNumbers = new string[2];
+    Person person1 = new("Nancy", "Davolio", phoneNumbers);
+    Person person2 = new("Nancy", "Davolio", phoneNumbers);
+    Console.WriteLine(person1 == person2); // output: True
+
+    person1.PhoneNumbers[0] = "555-1234";
+    Console.WriteLine(person1 == person2); // output: True
+
+    Console.WriteLine(ReferenceEquals(person1, person2)); // output: False
+     * 
+     * **/
+
+
 }
