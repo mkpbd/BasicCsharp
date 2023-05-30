@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Records.RecordExample
 {
-    internal class RecordStructs
+    public class RecordStructs
     {
     }
 }
