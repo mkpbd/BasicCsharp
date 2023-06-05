@@ -67,5 +67,37 @@ namespace CollectionOfCShapr.Generics
                 Console.Write("<br>");
             }
         }
+
+        public static void GenericStack() {
+
+            Stack<string> stk = new Stack<string>();
+            stk.Push("cs.net");
+            stk.Push("vb.net");
+            stk.Push("asp.net");
+            stk.Push("sqlserver");
+
+            foreach (string s in stk)
+            {
+                Console.Write(s + "<br>");
+            }
+
+        }
+
+
+
+        public static void GenericQueue()
+        {
+            Queue<string> q = new Queue<string>();
+
+            q.Enqueue("cs.net");
+            q.Enqueue("vb.net");
+            q.Enqueue("asp.net");
+            q.Enqueue("sqlserver");
+
+            foreach (string s in q)
+            {
+                Console.Write(s + "<br>");
+            }
+        }
     }
 }
