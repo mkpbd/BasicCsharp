@@ -99,5 +99,33 @@ namespace CollectionOfCShapr.Generics
                 Console.Write(s + "<br>");
             }
         }
+
+
+        public static void GenericShashSet()
+        {
+            var shah = new HashSet<int>();
+            shah.Add(1);
+            shah.Add(2);
+                
+            shah.Add(3);
+            shah.Add(2);
+            shah.Add(3);
+            shah.Add(4);
+            shah.Add(5);
+            shah.Add(6);
+
+            
+        }
+
+        public static void GenericSortedList() {
+          var slist =  new SortedList<int, string>();
+            slist.Add(1, "jamal");
+            slist.Add(5, "af");
+            slist.Add(3, "cc");
+            slist.Add(1, "ee");
+            slist.Add(4, "romal");
+            slist.Add(2, "tomal");
+           
+        }
     }
 }
