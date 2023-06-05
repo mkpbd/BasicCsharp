@@ -38,5 +38,34 @@ namespace CollectionOfCShapr.Generics
                 Console.Write(o + "<br>");
             }
         }
+
+
+        public static void GenericList()
+        {
+            List<int> lst = new List<int>();
+            lst.Add(100);
+            lst.Add(200);
+            lst.Add(300);
+            lst.Add(400);
+            foreach (int i in lst)
+            {
+                Console.Write(i + "<br>");
+            }
+        }
+
+
+        public static void GenericDictonary()
+        {
+            Dictionary<int, string> dct = new Dictionary<int, string>();
+            dct.Add(1, "cs.net");
+            dct.Add(2, "vb.net");
+            dct.Add(3, "vb.net");
+            dct.Add(4, "vb.net");
+            foreach (KeyValuePair<int, string> kvp in dct)
+            {
+                Console.Write(kvp.Key + " " + kvp.Value);
+                Console.Write("<br>");
+            }
+        }
     }
 }
