@@ -127,5 +127,31 @@ namespace CollectionOfCShapr.Generics
             slist.Add(2, "tomal");
            
         }
+
+
+
+
+        public static void LinkList()
+        {
+            // Creating a LinkedList of Strings
+            LinkedList<String> myList = new LinkedList<String>();
+
+            // Adding nodes in LinkedList
+            myList.AddLast("Geeks");
+            myList.AddLast("for");
+            myList.AddLast("Data Structures");
+            myList.AddLast("Noida");
+
+            foreach (String s in myList)
+            {
+                Console.WriteLine(  s);
+            }
+
+            // To check if LinkedList is empty or not
+            if (myList.Count > 0)
+                Console.WriteLine("LinkedList is not empty");
+            else
+                Console.WriteLine("LinkedList is empty");
+        }
     }
 }
